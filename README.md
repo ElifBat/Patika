@@ -4,11 +4,11 @@ Bu repo [Kodluyoruz](https://www.kodluyoruz.org/) Front-End Eğitiminde oluştur
 
 ![](kodluyoruz.png)
 
-## Installation
+## Installationgir
 
 Öncelikle projeyi clonelayın. (Buraya sizin reponuzdan aldığğınız link gelecek)
 
-'git clone https://github.com/ElifBat/Patika.git'
+` git clone https://github.com/ElifBat/Patika.git`
 
 ## Usage
 
@@ -16,10 +16,10 @@ Projeyi cloneladıtan sonra Visual Studio Code programında açınız.
 
 Linux için:
 
-'''
+```
 cd kodluyoruzilkrepo
 code
-'''
+```
 
 ## Contributing
 
