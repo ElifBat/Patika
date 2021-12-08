@@ -2,7 +2,7 @@
 
 Bu repo [Kodluyoruz](https://www.kodluyoruz.org/) Front-End Eğitiminde oluşturduğumuz lk repo. İçinde bir adet README dosyası ve bir adet de index.html barındırıyor.
 
-![](kodluyoruz.png)
+![img](kodluyoruz.png)
 
 ## Installationgir
 
