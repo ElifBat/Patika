@@ -1,11 +1,13 @@
 section, header, nav{
-    background-color: #f0d69e;
-    width: 85%;
+
     color: rgb(71, 51, 7);
     font-family: 'Josefin Slab', serif;
+    margin: auto;
+    width: 1500px;
 }
 h1, h2{
     color: maroon;
+    clear: both;
 
 }
 
@@ -18,6 +20,13 @@ header{
     font-family: cursive;
     font-size: 100px;
     color: maroon;
+    padding-top: 50px;
+}
+hr{
+    color: saddlebrown;
+    border:solid;
+    height: 5px;
+    width: 90%;
 }
 
 li, p, nav{
@@ -28,7 +37,7 @@ h1{
 }
 
 ul {
-    list-style-type: circle;
+    list-style-type: none;
 }
 
 a[href] {
@@ -47,6 +56,39 @@ h2::first-letter{
     font-size: 60px;
     font-family: cursive;
     border: solid 1px rgb(71, 51, 7);
+    padding-right: 15px;
+    padding-top: 15px;
 }
 
+.conteiner {
+   
+    width: 1500px;
+    height: auto;
+    margin: auto;
+    background-color: #f0d69e;
+    text-align: center;
+    padding: 0px 20px 20px 0px;
+    
+}
+
+.content{
+    width: 90%;
+    height: auto;
+    border: saddlebrown solid;
+    float: left;
+    margin: 4%;
+    text-align: center
+}
+
+
+.box{
+    width: 30%;
+    height: 800px;
+    border: saddlebrown solid;
+    float: left;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    text-align: center
+}
 
