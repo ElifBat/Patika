@@ -1,0 +1,88 @@
+/*this project has 2 boxes and 1 conteiner*/
+.conteiner{
+    text-align: center;
+}
+
+.box1{  
+    background-color:rgb(238, 236, 236);
+    width: auto;    
+    margin: 0px 90px 1px 90px;
+    padding-bottom: 20px; 
+    height: 86px;
+}
+
+.box2{
+    float: left;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+/*Box2 has 3 parts.*/
+
+#part1, #part2, #part3{
+    list-style-type: none;
+    height: 104px;
+}
+
+#part1{
+    width: 520px;
+    background-color: #7EE5DA;
+    margin: 2px 0px 0px 90px;
+    font-size: 20px;
+}
+
+#part2{
+    width: 266px;
+    background-color: #70CCC2;
+    margin: 2px;
+}
+
+#part3{
+    width: 644px;
+    background-color: #62B3AA;
+    margin: 2px 90px 0px 1px;
+}
+
+
+p {
+    font-size: 20px;
+    font-family: serif;  
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+button{
+    border-radius: 4px;
+    padding: 1px 10px;
+    font-size: 16px;
+    background-color: #e7e7e7;
+    color: black;
+    text-align: center;
+    width: auto;
+    height: auto;
+    align-content: center;
+    margin-top: 2px;
+}
+
+.button_line{
+    text-decoration: none;
+}
+
+input[type=text]{
+    width: 24%;
+    padding: 5px 5px;
+    font-size: 16px;
+    font-family: serif;
+}
+
+#second_text{
+    width: 40%; 
+}
+
+button:hover {
+    background-color: #c0c0c0;
+}
+
+footer{
+    margin-top: 50px;
+}
