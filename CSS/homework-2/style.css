@@ -22,6 +22,10 @@
 #part1, #part2, #part3{
     list-style-type: none;
     height: 104px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #part1{
