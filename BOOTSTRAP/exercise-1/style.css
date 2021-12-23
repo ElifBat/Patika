@@ -67,7 +67,7 @@ box-shadow: 0px 1px rgb(236, 235, 235);
   font-family: arial;
   position: relative;
   display: flex;
-  border-bottom: solid red 3px; 
+  border-bottom: solid rgb(206, 50, 50) 3px; 
 }
 
 .box2 {
@@ -109,7 +109,14 @@ box-shadow: 0px 1px rgb(236, 235, 235);
   top: 0px;
 }
 
-.other-content{
+.part-of-connect {
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 
+}
 
+.p-part-of-connect{
+  font-size: 16px;
 }
