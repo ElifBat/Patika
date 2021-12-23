@@ -1,0 +1,68 @@
+section{
+    color: rgb(71, 51, 7);
+    font-family: 'Josefin Slab', serif;
+}
+
+hr{
+border: grey solid 3px;
+}
+
+h1, h2{
+    color: maroon;
+    clear: both;
+}
+
+h2::first-letter{
+    font-size: 60px;
+    font-family: cursive;
+    border: solid 3px #f0d69e;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+
+header{
+    font-family: cursive;
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.container {
+    background-color: #E9ECEF;
+}
+
+
+.navbar{
+    text-decoration: none;
+    height: 100px;
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar__link, .navbar__link:hover{
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.title{
+    font-size: 30px;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    margin: 10px;
+    padding: 0px;
+}
+
