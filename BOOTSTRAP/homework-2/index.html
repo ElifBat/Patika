@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+        <link rel="stylesheet" href="./style.css">
+
+    <title>Instagram</title>
+</head>
+
+<body>
+    <!-- Navbar - start -->
+    <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white custom-navbar ">
+                <div class="col-3">
+                    <a class="navbar-brand" href="#">
+                        <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+                            alt="Instagram-logo" />
+                    </a>
+                </div>
+
+                <div class="col-4">
+                    <form class="search d-flex">
+                        <input class="form-control me-2 bg-light" type="search" placeholder="Search"
+                            aria-label="Search" />
+                    </form>
+                </div>
+
+                <div class="col-3">
+                    <ul class="navbar-nav custom-navbar__icons">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <svg aria-label="Home" class="_8-yf5" color="#262626" fill="#262626" height="24"
+                                    role="img" viewBox="0 0 24 24" width="24">
+                                    <path
+                                        d="M22 23h-6.001a1 1 0 01-1-1v-5.455a2.997 2.997 0 10-5.993 0V22a1 1 0 01-1 1H2a1 1 0 01-1-1V11.543a1.002 1.002 0 01.31-.724l10-9.543a1.001 1.001 0 011.38 0l10 9.543a1.002 1.002 0 01.31.724V22a1 1 0 01-1 1z">
+                                    </path>
+                                    <path
+                                        d="M22 23h-6.001a1 1 0 01-1-1v-5.455a2.997 2.997 0 10-5.993 0V22a1 1 0 01-1 1H2a1 1 0 01-1-1V11.543a1.002 1.002 0 01.31-.724l10-9.543a1.001 1.001 0 011.38 0l10 9.543a1.002 1.002 0 01.31.724V22a1 1 0 01-1 1z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="nav-item mt-2">
+                            <a aria-label="Direct messaging - 0 new notifications link" class="xWeGp"
+                                href="/direct/inbox/" tabindex="0">
+                                <svg aria-label="Direct" class="_8-yf5" color="#262626" fill="#262626" height="24"
+                                    role="img" viewBox="0 0 24 24" width="24">
+                                    <line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"
+                                        x1="22" x2="9.218" y1="3" y2="10.083"></line>
+                                    <polygon fill="none"
+                                        points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334"
+                                        stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon>
+                                </svg></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <svg aria-label="New Post" class="_8-yf5" color="#262626" fill="#262626" height="24"
+                                    role="img" viewBox="0 0 24 24" width="24">
+                                    <path
+                                        d="M2 12v3.45c0 2.849.698 4.005 1.606 4.944.94.909 2.098 1.608 4.946 1.608h6.896c2.848 0 4.006-.7 4.946-1.608C21.302 19.455 22 18.3 22 15.45V8.552c0-2.849-.698-4.006-1.606-4.945C19.454 2.7 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.547 2 5.703 2 8.552z"
+                                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"></path>
+                                    <line fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" x1="6.545" x2="17.455" y1="12.001"
+                                        y2="12.001"></line>
+                                    <line fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" x1="12.003" x2="12.003" y1="6.545"
+                                        y2="17.455"></line>
+                                    <path
+                                        d="M2 12v3.45c0 2.849.698 4.005 1.606 4.944.94.909 2.098 1.608 4.946 1.608h6.896c2.848 0 4.006-.7 4.946-1.608C21.302 19.455 22 18.3 22 15.45V8.552c0-2.849-.698-4.006-1.606-4.945C19.454 2.7 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.547 2 5.703 2 8.552z"
+                                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"></path>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <svg aria-label="Find People" class="_8-yf5 mt-2" color="#262626" fill="#262626" height="24"
+                                role="img" viewBox="0 0 24 24" width="24">
+                                <path
+                                    d="M13.173 13.164l1.491-3.829-3.83 1.49zM12.001.5a11.5 11.5 0 1011.5 11.5A11.513 11.513 0 0012.001.5zm5.35 7.443l-2.478 6.369a1 1 0 01-.57.569l-6.36 2.47a1 1 0 01-1.294-1.294l2.48-6.369a1 1 0 01.57-.569l6.359-2.47a1 1 0 011.294 1.294z">
+                                </path>
+                            </svg>
+                        </li>
+
+                        <li class="nav-item mt-2">
+                            <img style="width: 24px" src="img/heart.svg" />
+                        </li>
+
+                        <li class="nav-item">
+                            <img class=" p-1 user-profile" src="https://imgix.ranker.com/user_node_img/50056/1001101092/original/mirai-kuriyama-photo-u1"/>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+    </div>
+    <!-- Navbar - end -->
+        
+    <div class="background">
+        <section class="container">
+            <div class="row" >
+                <div class="col-7 order-1">
+                    <!-- Top slider - start -->
+                    <div class="bg-white border border-black">
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <ul class="text-center slider-list mb-0 mt-2">
+                              <li>
+                                    <img class="slider-pic" src="img/yato.jpg" class="d-block w-100">
+                                    <p class="slider-p">yato_gami</p>
+                              </li>
+                              <li>
+                                    <img class="slider-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwWIILYEW4zvsJEfF52dgwoQYu40CVI-aOg&usqp=CAU" class="d-block w-100">
+                                    <p class="slider-p">yonahime</p>
+                              </li>
+                              <li>
+                                    <img class="slider-pic" src="img/ses.png" class="d-block w-100">
+                                    <p class="slider-p">sesshoumaru</p>
+                              </li>
+                              <li>
+                                    <img class="slider-pic" src="img/rei.jpeg" class="d-block w-100">
+                                    <p class="slider-p">sailor_mars</p>
+                              </li>
+                              <li>
+                                    <img class="slider-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcMD6aG0YU4N1ZO0oh_eAhvx4RShPDlTQtXg&usqp=CAU" class="d-block w-100">
+                                    <p class="slider-p">blue</p>
+                              </li>
+                              <li>
+                                    <img class="slider-pic" src="img/levi.jpg" class="d-block w-100">
+                                    <p class="slider-p">handsomeLevi55</p>
+                              </li>
+                              <li>
+                                    <img class="slider-pic" src="img/katara.jpg" class="d-block w-100">
+                                    <p class="slider-p">waterbender</p>
+                              </li>
+                              <li>
+                                    <img class="slider-pic" src="img/itachi.jpg" class="d-block w-100">
+                                    <p class="slider-p">sharingan</p>
+                              </li>
+                            </ul>                      
+                          </div>
+                          <div class="carousel-item">
+                            <ul class="text-center slider-list mb-0 mt-2">
+                              <li>
+                                  <img class="slider-pic" src="img/hak.jpg" class="d-block w-100">
+                                  <p class="slider-p">windtribeHaku</p>
+                              </li>
+                              <li>
+                                    <img class="slider-pic" src="img/nora.jpg" class="d-block w-100">
+                                    <p class="slider-p">nora</p>
+                              </li>
+                              <li>
+                                    <img class="slider-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT98EwJkWqawRgjaUmO0IjtDq48Nidm7lpasghLW1SAkWAR4n2K6RZs0RNDKcdCPN3bpxU&usqp=CAU" class="d-block w-100">
+                                    <p class="slider-p">green</p>
+                              </li>
+                              <li>
+                                    <img class="slider-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMnM3MsEe5egw92JLTcCEgEMPHbl5IlZUu1g&usqp=CAU" class="d-block w-100">
+                                    <p class="slider-p">hyakki</p>
+                              </li>                                
+                              <li>
+                                    <img class="slider-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr3GjxaZvj-sHczmZ4QUv4-6HfIcbtT3h-ZA&usqp=CAU" class="d-block w-100">
+                                    <p class="slider-p">chiseHatori</p>
+                              </li>
+                              <li>
+                                    <img class="slider-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7EX3caWLwe7wR5bbn4d1NRCSAo4pWguUemw&usqp=CAU" class="d-block w-100">
+                                    <p class="slider-p">hyakki-no-Mio</p>
+                              </li>
+                              <li>
+                                    <img class="slider-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDHerLmWn9gx_zFzdDwnXj2LT9EXBhShtUpw&usqp=CAU" class="d-block w-100">
+                                    <p class="slider-p">eduardo_elrick</p>
+                              </li>
+                              <li>
+                                    <img class="slider-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYGKiGz50VKeXUbrgREUMl4u3IrfAgTdJ6Qg&usqp=CAU" class="d-block w-100">
+                                    <p class="slider-p">L</p>
+                              </li>
+                            </ul>
+                          </div>
+                        <button class="ml-0 carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
+                    </div> <!-- Top slider - end -->
+                
+                     <!-- Main content - start -->
+                    <main>
+                <div class="mt-4 card bg-white">
+                <div class="share-area ms-2 row">
+                    <div class="col-4 d-flex">
+                        <img class="share-area__pic mt-2" src="img/yato.jpg" class="d-block w-100">
+                        <p class="share-p ms-3 mt-4">yato_gami</p>
+                    </div>
+                    <div class="col-2">
+                        <img style="width: 16px;" src="img/option.png" alt="">
+                    </div>
+                </div>
+                <img class="p-0 m-0" src="https://a-static.besthdwallpaper.com/noragami-yato-duvar-kagidi-1280x720-78195_45.jpg" class="card-img-top">
+                <div class="card-body pb-0">
+                    <div class="row share-area__icon border-bottom">
+                        <div class="col-2 p-0">
+                            <ul class="share-list">
+                                <li>
+                                   <img class="share-list__item" src="img/heart.svg" alt=""> 
+                                </li>
+                                <li>
+                                    <img class="share-list__item" src="img/bubble-chat.png" alt="">
+                                </li>
+                                <li class="share-list__item">
+                                    <a aria-label="Direct messaging - 0 new notifications link" class="xWeGp"
+                                    href="/direct/inbox/" tabindex="0">
+                                    <svg aria-label="Direct" class="_8-yf5" color="#262626" fill="#262626" height="24"
+                                        role="img" viewBox="0 0 24 24" width="24">
+                                        <line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"
+                                            x1="22" x2="9.218" y1="3" y2="10.083"></line>
+                                        <polygon fill="none"
+                                            points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334"
+                                            stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon>
+                                    </svg></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-10 d-flex justify-content-end">
+                            <svg aria-label="Save" class="_8-yf5 " color="black" fill="#8e8e8e" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                        </div>
+                        <p class="col-12 p-0 mb-0" style="font-size: 14px">Liked by <b>hyaki</b> and 155 others</p>
+                        <p class="col-12 p-0" style="color: lightslategray; font-size: 14px;"> View all 24 comments</p>
+                    </div>
+    
+                  <div class="card-text row pt-3 mb-0">
+                      <div class="col-1">
+                        <svg aria-label="Emoji" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M15.83 10.997a1.167 1.167 0 101.167 1.167 1.167 1.167 0 00-1.167-1.167zm-6.5 1.167a1.167 1.167 0 10-1.166 1.167 1.167 1.167 0 001.166-1.167zm5.163 3.24a3.406 3.406 0 01-4.982.007 1 1 0 10-1.557 1.256 5.397 5.397 0 008.09 0 1 1 0 00-1.55-1.263zM12 .503a11.5 11.5 0 1011.5 11.5A11.513 11.513 0 0012 .503zm0 21a9.5 9.5 0 119.5-9.5 9.51 9.51 0 01-9.5 9.5z"></path>
+                        </svg>
+                      </div>
+                      <p class="col-9" style="color: lightslategray; font-size: 14px;"> Add a command </p>
+                      <div class="col-2 d-flex justify-content-end">
+                        <p class="disabled" style="color: rgb(179, 220, 233); font-size: 14px;"> Post </p>
+                      </div>
+    
+    
+                </div>
+              </div>             
+                </div> <!-- user1 end -->
+    
+                <div class="mt-4 card bg-white">
+                  <div class="share-area m-2 row">
+                    <div class="col-3 d-flex">
+                        <img class="share-area__pic mt-2" src="img/rei.jpeg" class="d-block w-100">
+                        <p class="share-p ms-3 mt-4">rei</p>
+                    </div>
+                    <div class="col-2">
+                        <img style="width: 16px;" src="img/option.png" alt="">
+                    </div>
+                  </div>
+                <img class="p-0 m-0" src="https://images.squarespace-cdn.com/content/v1/56ccb957c2ea51fadfe314a6/1584992571563-G8NL211WY1NO622BT1ZB/SailorMars_SailorMoon" class="card-img-top">
+                <div class="card-body pb-0">
+                    <div class="row share-area__icon border-bottom">
+                        <div class="col-2 p-0">
+                            <ul class="share-list">
+                                <li>
+                                   <img class="share-list__item" src="img/heart.svg" alt=""> 
+                                </li>
+                                <li>
+                                    <img class="share-list__item" src="img/bubble-chat.png" alt="">
+                                </li>
+                                <li class="share-list__item">
+                                    <a aria-label="Direct messaging - 0 new notifications link" class="xWeGp"
+                                    href="/direct/inbox/" tabindex="0">
+                                    <svg aria-label="Direct" class="_8-yf5" color="#262626" fill="#262626" height="24"
+                                        role="img" viewBox="0 0 24 24" width="24">
+                                        <line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"
+                                            x1="22" x2="9.218" y1="3" y2="10.083"></line>
+                                        <polygon fill="none"
+                                            points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334"
+                                            stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon>
+                                    </svg></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-10 d-flex justify-content-end">
+                            <svg aria-label="Save" class="_8-yf5 " color="black" fill="#8e8e8e" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                        </div>
+                        <p class="col-12 p-0 mb-0" style="font-size: 14px">Liked by <b>green</b> and 3248595 others</p>
+                        <p class="col-12 p-0" style="color: lightslategray; font-size: 14px;"> View all 24 comments</p>
+                    </div>
+    
+                  <div class="card-text row pt-3 mb-0">
+                      <div class="col-1">
+                        <svg aria-label="Emoji" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M15.83 10.997a1.167 1.167 0 101.167 1.167 1.167 1.167 0 00-1.167-1.167zm-6.5 1.167a1.167 1.167 0 10-1.166 1.167 1.167 1.167 0 001.166-1.167zm5.163 3.24a3.406 3.406 0 01-4.982.007 1 1 0 10-1.557 1.256 5.397 5.397 0 008.09 0 1 1 0 00-1.55-1.263zM12 .503a11.5 11.5 0 1011.5 11.5A11.513 11.513 0 0012 .503zm0 21a9.5 9.5 0 119.5-9.5 9.51 9.51 0 01-9.5 9.5z"></path>
+                        </svg>
+                      </div>
+                      <p class="col-9" style="color: lightslategray; font-size: 14px;"> Add a command </p>
+                      <div class="col-2 d-flex justify-content-end">
+                        <p class="disabled" style="color: rgb(179, 220, 233); font-size: 14px;"> Post </p>
+                      </div>
+    
+    
+                </div>
+                </div>                   
+                </div> <!-- user2 end -->
+    
+                <div class="mt-4 card bg-white">
+                        <div class="share-area m-2 row">
+                            <div class="col-3 d-flex">
+                                <img class="share-area__pic mt-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7EX3caWLwe7wR5bbn4d1NRCSAo4pWguUemw&usqp=CAU" class="d-block w-100">
+                                <p class="share-p ms-3 mt-4">hyakki-no-Mio</p>
+                            </div>
+                            <div class="col-2">
+                                <img style="width: 16px;" src="img/option.png" alt="">
+                            </div>
+                        </div>
+                        <img class="p-0 m-0" src="https://c4.wallpaperflare.com/wallpaper/525/477/304/anime-dororo-hyakkimaru-dororo-mio-dororo-hd-wallpaper-preview.jpg" class="card-img-top">
+                        <div class="card-body pb-0">
+                            <div class="row share-area__icon border-bottom">
+                                <div class="col-2 p-0">
+                                    <ul class="share-list">
+                                        <li>
+                                           <img class="share-list__item" src="img/heart.svg" alt=""> 
+                                        </li>
+                                        <li>
+                                            <img class="share-list__item" src="img/bubble-chat.png" alt="">
+                                        </li>
+                                        <li class="share-list__item">
+                                            <a aria-label="Direct messaging - 0 new notifications link" class="xWeGp"
+                                            href="/direct/inbox/" tabindex="0">
+                                            <svg aria-label="Direct" class="_8-yf5" color="#262626" fill="#262626" height="24"
+                                                role="img" viewBox="0 0 24 24" width="24">
+                                                <line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"
+                                                    x1="22" x2="9.218" y1="3" y2="10.083"></line>
+                                                <polygon fill="none"
+                                                    points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334"
+                                                    stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon>
+                                            </svg></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-10 d-flex justify-content-end">
+                                    <svg aria-label="Save" class="_8-yf5 " color="black" fill="#8e8e8e" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                                </div>
+                                <p class="col-12 p-0 mb-0" style="font-size: 14px">Liked by <b>hyakki</b> and 65823 others</p>
+                                <p class="col-12 p-0" style="color: lightslategray; font-size: 14px;"> View all 24 comments</p>
+                            </div>
+            
+                          <div class="card-text row pt-3 mb-0">
+                              <div class="col-1">
+                                <svg aria-label="Emoji" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M15.83 10.997a1.167 1.167 0 101.167 1.167 1.167 1.167 0 00-1.167-1.167zm-6.5 1.167a1.167 1.167 0 10-1.166 1.167 1.167 1.167 0 001.166-1.167zm5.163 3.24a3.406 3.406 0 01-4.982.007 1 1 0 10-1.557 1.256 5.397 5.397 0 008.09 0 1 1 0 00-1.55-1.263zM12 .503a11.5 11.5 0 1011.5 11.5A11.513 11.513 0 0012 .503zm0 21a9.5 9.5 0 119.5-9.5 9.51 9.51 0 01-9.5 9.5z"></path>
+                                </svg>
+                              </div>
+                              <p class="col-9" style="color: lightslategray; font-size: 14px;"> Add a command </p>
+                              <div class="col-2 d-flex justify-content-end">
+                                <p class="disabled" style="color: rgb(179, 220, 233); font-size: 14px;"> Post </p>
+                              </div>
+                        </div>
+                      </div>
+                    <!-- Main content - end -->
+            
+            
+                            
+                </div> <!-- user3 end -->
+    
+                    </main> <!-- Main content - end -->
+                </div> 
+                
+                <!-- Sidebar - start -->
+                <div class="col-5 order-2">
+                    <div class="offers row mt-3">
+                        <ul class="d-flex sidebar-list">
+                            <li class="col-1 me-3">
+                                <img class="p-1 user-profile" src="https://imgix.ranker.com/user_node_img/50056/1001101092/original/mirai-kuriyama-photo-u1"/>
+                            </li>
+                            <li class="col-4">
+                                <p class="mb-0" style="font-size: 12px;"><b>elifcifci_</b></p> 
+                                <p class="mb-0" style="font-size: 12px; color: gray;">Elif</p>
+                            </li>
+                            <li class="col-2 ms-1 text-center" >
+                                <p class="mb-0" style="font-size: 12px; color: rgb(49, 143, 231);"><b>Switch</b></p>
+                            </li>
+                        </ul> 
+
+                        <div class="sidebar-title d-flex justify-content-space-between">  
+                        <p class="col-6 text-secondary"> <b>Suggestions For You</b></p>
+                        <p class="col-3"><b>See All</b></p>
+                        </div> 
+
+                        <ul class="d-flex sidebar-list">
+                            <li class="col-1 ">
+                                <img class=" p-1 offers-pic" src="img/sarı.jpg"/>
+                            </li>
+                            <li class="col-5">
+                                <p class="mb-0" style="font-size: 12px;"><b>yellow_dragon</b></p> 
+                                <p class="mb-0" style="font-size: 10px; color: gray;">New to instagram</p>
+                            </li>
+                            <li class="col-3" >
+                                <p class="mb-0" style="font-size: 12px; color: rgb(49, 143, 231);"><b>Follow</b></p>
+                            </li>
+                        </ul> 
+
+                        <ul class="d-flex sidebar-list">
+                            <li class="col-1 ">
+                                <img class=" p-1 offers-pic" src="https://pbs.twimg.com/profile_images/957797310272016384/VEdRTSKt_400x400.jpg"/>
+                            </li>
+                            <li class="col-5">
+                                <p class="mb-0" style="font-size: 12px;"><b>HISOKA</b></p> 
+                                <p class="mb-0" style="font-size: 10px; color: gray;">New to instagram</p>
+                            </li>
+                            <li class="col-3" >
+                                <p class="mb-0" style="font-size: 12px; color: rgb(49, 143, 231);">Follow</p>
+                            </li>
+                        </ul>
+
+                        <ul class="d-flex sidebar-list">
+                            <li class="col-1 ">
+                                <img class=" p-1 offers-pic" src="img/Yukine.jpg"/>
+                            </li>
+                            <li class="col-5">
+                                <p class="mb-0" style="font-size: 12px;"><b>yukine</b></p> 
+                                <p class="mb-0" style="font-size: 10px; color: gray;">Followed by yato_gami +35 more</p>
+                            </li>
+                            <li class="col-3" >
+                                <p class="mb-0" style="font-size: 12px; color: rgb(49, 143, 231);"><b>Follow</b></p>
+                            </li>
+                        </ul>
+
+                        <ul class="d-flex sidebar-list">
+                            <li class="col-1 ">
+                                <img class=" p-1 offers-pic" src="img/UncleIroh.png"/>
+                            </li>
+                            <li class="col-5">
+                                <p class="mb-0" style="font-size: 12px;"><b>UncleIroh</b></p> 
+                                <p class="mb-0" style="font-size: 10px; color: gray;">Followed by fire-lord +15 more</p>
+                            </li>
+                            <li class="col-3" >
+                                <p class="mb-0" style="font-size: 12px; color: rgb(49, 143, 231);"><b>Follow</b></p>
+                            </li>
+                        </ul>
+
+                        <ul class="d-flex sidebar-list">
+                            <li class="col-1 ">
+                                <img class=" p-1 offers-pic" src="https://www.nautiljon.com/images/perso/00/69/kamado_nezuko_18296.jpg"/>
+                            </li>
+                            <li class="col-5">
+                                <p class="mb-0" style="font-size: 12px;"><b>Nezuko</b></p> 
+                                <p class="mb-0" style="font-size: 10px; color: gray;">Followed by demon_slayers +21 more</p>
+                            </li>
+                            <li class="col-3" >
+                                <p class="mb-0" style="font-size: 12px; color: rgb(49, 143, 231);"><b>Follow</b></p>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <P style="font-size: 10px; color: rgb(197, 194, 194);">
+                        About - Help - Press - API - Jobs - Privacy - Terms <br> 
+                        Locations - Top - Accounts - Hashtags - Language
+                    </P>
+                    <P style="font-size: 10px; color: rgb(197, 194, 194);">
+                        © 2021 INSTAGRAM FROM META
+                    </P>
+
+                </div>  
+                <!-- Sidebar - end -->
+
+            </div>
+               
+
+
+            </div>
+
+            </section>
+        </div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

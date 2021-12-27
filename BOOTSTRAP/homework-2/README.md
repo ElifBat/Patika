@@ -1,0 +1,1 @@
+![This photo from bootstrap homework-2](img/clone-inst.png)
