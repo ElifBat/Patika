@@ -5,12 +5,11 @@
 
 .custom-navbar {
     display: flex;
-    justify-content: space-between; 
+ 
 }
 
 .custom-navbar__icons{
     display: flex;
-    justify-content: space-around;
 }
 
 .user-profile{
@@ -32,8 +31,8 @@
 }
 
 .slider-pic{
-    width: 66px;
-    height: 66px;
+    width: 46px;
+    height: 46px;
     border-radius: 50%;
     padding: 1px;
     border: 1px solid red;
@@ -55,7 +54,7 @@
 }
 
 .share-area__pic{
-    width: 50px;
+    width: 40px;
     border: 1px solid red;
     border-radius: 50%;
     padding: 1px;
