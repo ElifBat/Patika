@@ -3,8 +3,8 @@ body{
 }
 
 .logo{
-    width: 46px;
-    height: 48px;
+    width: 44px;
+    height: 46px;
 }
 
 .bg-yellow{
@@ -19,6 +19,10 @@ body{
     border-bottom: 1px solid #e6e6e6;
 }
 
+.border-ligt{
+    border: 1px solid #e6e6e6;
+}
+
 .font-alegreya{
     font-family: 'Alegreya', serif;
     font-size: 60px;
@@ -27,4 +31,8 @@ body{
 
 .font-josefin{
     font-family: 'Josefin Slab', serif;
+}
+
+.article-list{
+    list-style-type: none;
 }

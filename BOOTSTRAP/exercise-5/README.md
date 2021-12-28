@@ -1,0 +1,1 @@
+![This photo from bootstrap exercise-5](img/Cloned-Medium.png)
