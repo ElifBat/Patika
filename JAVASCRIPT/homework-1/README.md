@@ -1,0 +1,1 @@
+![This photo from Javascript homework-1](img/hw-1)
