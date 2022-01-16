@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="En">
 
 <head>
   <meta charset="UTF-8" />
@@ -9,33 +9,34 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css">
-  <title>Yapılacaklar Listesi</title>
+  <title>To Do List</title>
 </head>
 
 <body>
   <div class="mr-1" style="position: relative">
     <div style="position: absolute; top: 0; right: 0">
-      <div id="liveToast1" class="toast success hide" role="alert" aria-live="assertive" aria-atomic="true"
+      <div id="successToast" class="toast success hide" role="alert" aria-live="assertive" aria-atomic="true"
         data-delay="4000">
         <div>
           <button type="button" class="close" data-dismiss="toast" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="toast-body">Listeye eklendi.</div>
+        <div class="toast-body">Added to list.</div>
       </div>
     </div>
   </div>
   <div class="mr-1" style="position: relative">
     <div style="position: absolute; top: 0; right: 0">
-      <div id="liveToast" class="toast error hide" role="alert" aria-live="assertive" aria-atomic="true"
+      <div id="errorToast" class="toast error hide" role="alert" aria-live="assertive" aria-atomic="true"
         data-delay="4000">
         <div>
           <button type="button" class="close" data-dismiss="toast" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="toast-body">Listeye boş ekleme yapamazsınız!</div>
+        <div class="toast-body">You cannot add empty value to the list!
+        </div>
       </div>
     </div>
   </div>
@@ -44,27 +45,13 @@
     <div class="header">
       <img src="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png"
         class="mb-1" alt="" />
-      <h2>Yapılacaklar Listesi</h2>
-      <input type="text" id="task" placeholder="Bugün ne yapacaksın?" />
-      <button id="liveToastBtn" class="button btn height">Ekle</button>
+      <h2>To Do List</h2>
+      <input type="text" id="task" placeholder="What will you do today?" />
+      <button id="liveToastBtn" class="button btn height">ADD</button>
     </div>
 
     <ul id="list">
-      <li class="list-item">3 Litre Su İç
-        <input class="close btn" type="reset" value="X"></input>
-      </li>
-      <li class="list-item">Ödevleri Yap
-        <input class="close btn" type="reset" value="X"></input>
-      </li>
-      <li class="list-item">En Az 3 Saat Kodlama Yap
-        <input class="close btn" type="reset" value="X"></input>
-      </li>
-      <li class="list-item">Yemek Yap
-        <input class="close btn" type="reset" value="X"></input>
-      </li>
-      <li class="list-item">50 Sayfa Kitap Oku
-        <input class="close btn" type="reset" value="X"></input>
-      </li>
+
     </ul>
 
   </div>
