@@ -11,4 +11,4 @@ All changing in page save by local storage.
 A notification will appear if the user sends a space as input, tries to send element without value, or if the input is added to the list.
 ![Local storage](img/Toast.png)
 
-![Local storage](img/Toast1.png)
+![Local storage](img/Toasts1.png)
