@@ -1,9 +1,3 @@
-let cardDOM = document.querySelectorAll(".card");
-let titleDOM = document.querySelectorAll(".title");
-let priceDOM = document.querySelectorAll(".price");
-let imgDOM = document.querySelectorAll(".img");
-let descDOM = document.querySelectorAll(".desc");
-
 const menu = [
   {
     id: 1,
@@ -89,43 +83,61 @@ const menu = [
   },
 ];
 
-// for (let i = 0; i <= menu.length; i++) {
-//   let sectionDOM = document.querySelector(".section-center");
-//   sectionDOM.innerHTML = document.createElement("div")
-//   let divFirst = document.querySelector(sectionDOM>div)
-//   divFirst.classList.add("card", "mb-3", "col-sm-5", "offset-1")
-//   let divSecond = document.createElement(sectionDOM>div>div);
-//   divSecond.classList.add("row", "g-0");
-//   let divThirth = document.createElement(sectionDOM>div>div>div)
-//   divThirth.classList.add("col-md-4")
-//   divThirth.innerHTML = document.createElement("img")
+for (let i = 0; i <= menu.length; i++) {
+  let sectionDOM = document.querySelector(".section-center");
+  sectionDOM.innerHTML = document.createElement("div");
+  let divFirst = document.querySelector("sectionDOM>div");
+  divFirst.classList.add("card", "mb-3", "col-sm-5", "offset-1");
+  divFirst.setAttribute("id", `${i}`);
 
-  //   sectionDOM.innerHTML = `
-  //   <div class="card mb-3 col-sm-5 offset-1" id="${i} style="max-width: 540px;">
-  //     <div class="row g-0">
-  //       <div class="col-md-4">
-  //         <img src="" class="img-fluid img photo">
-  //       </div>
-  //       <div class="col-md-8 ">
-  //         <div class="card-body row">
-  //           <h4 class="title col-sm-8"></h5>
-  //           <h4 class="price col-sm-4 ms-auto"></h5>
-  //             <hr>
-  //           <p class="desc"></p>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   </div>
-  // `
-// }
+  divFirst.innerHTML = document.createElement("div");
+  let divSecond = document.querySelector("sectionDOM>div>div")
+  divSecond.classList.add("row", "g-0")
 
+  divSecond.innerHTML = document.createElement("div");
+  let divThirth_1 = document.querySelector("divSecond>div");
+  divThirth_1.classList.add("col-md-4");
 
-menu.forEach((value, index) => {
-  titleDOM[index].innerHTML = menu[index].title;
-  priceDOM[index].innerHTML = menu[index].price;
-  descDOM[index].innerHTML = menu[index].desc;
-  imgDOM[index].setAttribute("src", menu[index].img);
-});
+  divThirth_1.innerHTML = document.createElement("img")
+  let imgs = document.querySelector("divThirth_1>img");
+  imgs.setAttribute("src", `${i}`)
+  imgs.classList.add("img-fluid", "img", "photo");
+
+  divSecond.innerHTML = document.createElement("div");
+  let divThirth_2 = document.querySelector("divSecond>div+div");
+  divThirth_2.classList.add("col-md-8");
+
+  divThirth_2.innerHTML = document.createElement("div");
+  let divFourth= document.querySelector("divThirth_2>div");
+  divThirth_1.classList.add("card-body", "row");
+
+  divFourth.innerHTML = document.createElement("h4");
+  let h4 = document.querySelector("divFourth>h4");
+  h4.classList.add("title", "col-sm-8");
+
+  divFourth.innerHTML = document.createElement("h4");
+  let h4 = document.querySelector("divFourth>h4+h4");
+  h4.classList.add("price", "col-sm-4" , "ms-auto");
+
+  divFourth.innerHTML = document.createElement("hr");
+
+  divFourth.innerHTML = document.createElement("p");
+  let p = document.querySelector("divFourth>h4+h4+p");
+  h4.classList.add("desc");
+}
+
+ let cardDOM = document.querySelectorAll(".card");
+ let titleDOM = document.querySelectorAll(".title");
+ let priceDOM = document.querySelectorAll(".price");
+ let imgDOM = document.querySelectorAll(".img");
+ let descDOM = document.querySelectorAll(".desc");
+
+ menu.forEach((value, index) => {
+   titleDOM[index].innerHTML = menu[index].title;
+   priceDOM[index].innerHTML = menu[index].price;
+   descDOM[index].innerHTML = menu[index].desc;
+   imgDOM[index].setAttribute("src", menu[index].img);
+ });
 
 
 
