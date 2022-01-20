@@ -1,4 +1,4 @@
-//Content
+//Arrays
 const menu = [
   {
     id: 1,
@@ -83,16 +83,114 @@ const menu = [
     desc: `Red bean paste dessert, serving with honey.`,
   },
 ];
+let buttonsInner = ["All", "Korea", "Japan", "China"];
+let newArray = [];
 
 //Page Structure DOMs
 let buttonContainer = document.querySelector(".btn-container")
 let sectionDOM = document.querySelector(".section-center");
 
+//Buttons Structure
+for (let counter = 0; counter < 4; counter++) {
+  let element = document.createElement("button");
+  buttonContainer.append(element);
+  element.classList.add("btn", "btn-outline-dark");
+  element.setAttribute("type", "button");
+  element.setAttribute("onclick", "clickButton(event)");
+  element.innerHTML = buttonsInner[counter];
+
+  if (counter !== 0) {
+    element.classList.add("btn-item");
+  }
+
+}
+
+//Page Structure 
+function pageStructure(newArray) {
+  sectionDOM.innerHTML = "";
+  //Menu Content Structure
+  for (let i = 0; i < newArray.length; i++) {
+
+    //Create Elements
+    let divFirst = createCustomElements("div");
+    let divSecond = createCustomElements("div");
+    let divThirth = createCustomElements("div");
+    let divFourth = createCustomElements("div");
+    let divFourth_1 = createCustomElements("div");
+    let divFourth_2 = createCustomElements("div");
+    let h4_1 = createCustomElements("h4");
+    let h4_2 = createCustomElements("h4");
+    let imgs = createCustomElements("img");
+    let p = createCustomElements("p");
+
+    //Create Attributes
+    divFirst.setAttribute("id", `${i}`);
+    imgs.setAttribute("src", `${i}`);
+
+    // To insert content at the beginning of the selected elements
+    sectionDOM.prepend(divFirst)
+    divFirst.append(divSecond)
+    divSecond.prepend(divThirth)
+    divThirth.prepend(imgs);
+    divSecond.append(divFourth)
+    divFourth.prepend(divFourth_1)
+    divFourth_1.append(h4_1);
+    divFourth_1.append(h4_2);
+    divFourth.append(divFourth_2);
+    divFourth_2.append(p);
+
+    //classLists
+    sectionDOM.classList.add("newArray");
+    divFirst.classList.add("card", "mb-3", "col-sm-5", "mb-5");
+    divSecond.classList.add("row", "g-0");
+    divThirth.classList.add("col-md-4");
+    imgs.classList.add("img-fluid", "img", "photo");
+    divFourth.classList.add("col-md-8");
+    divFourth_1.classList.add("newArray-title");
+    h4_1.classList.add("title");
+    h4_2.classList.add("price");
+    p.classList.add("desc", "newArray-text");
+
+    if (i % 2 == 0) {
+      divFirst.classList.add("offset-1");
+    }
+  }
+
+  //DOM
+  let cardDOM = document.querySelectorAll(".card");
+  let titleDOM = document.querySelectorAll(".title");
+  let priceDOM = document.querySelectorAll(".price");
+  let imgDOM = document.querySelectorAll(".img");
+  let descDOM = document.querySelectorAll(".desc");
+
+  newArray.forEach((value, index) => {
+    titleDOM[index].innerHTML = newArray[index].title;
+    priceDOM[index].innerHTML = newArray[index].price;
+    descDOM[index].innerHTML = newArray[index].desc;
+    imgDOM[index].setAttribute("src", newArray[index].img);
+  });
+
+}
+
+//Create Elements
+function createCustomElements(elementType) {
+  return document.createElement(elementType)
+}
+
+//Events
+window.addEventListener("load", load);
+
+//Merge Content When the Page Loaded
+function load() {
+  newArray = menu.slice();
+  pageStructure(newArray)
+}
+
 //Merge Content When the Page Filtered
-function bu(event) {
+function clickButton(event) {
+  newArray = [];
   let buttonContent = event.target.innerHTML;
 
-  let newArray = []
   for (let counter = 0; counter < menu.length; counter++) {
     if (buttonContent == "All") {
       load()
@@ -102,111 +200,5 @@ function bu(event) {
     }
   }
 
-  //Merge Content with the Page
-  newArray.forEach((value, index) => {
-    titleDOM[index].innerHTML = newArray[index].title;
-    priceDOM[index].innerHTML = newArray[index].price;
-    descDOM[index].innerHTML = newArray[index].desc;
-    imgDOM[index].setAttribute("src", newArray[index].img);
-  });
+  pageStructure(newArray);
 }
-
-//Menu Content Structure
-for (let i = 0; i < menu.length; i++) {
-
-  //Create Elements
-  let divFirst = createCustomElements("div");
-  let divSecond = createCustomElements("div");
-  let divThirth = createCustomElements("div");
-  let divFourth = createCustomElements("div");
-  let divFourth_1 = createCustomElements("div");
-  let divFourth_2 = createCustomElements("div");
-  let h4_1 = createCustomElements("h4");
-  let h4_2 = createCustomElements("h4");
-  let imgs = createCustomElements("img");
-  let p = createCustomElements("p");
-
-  //Create Attributes
-  divFirst.setAttribute("id", `${i}`);
-  imgs.setAttribute("src", `${i}`);
-
-  // To insert content at the beginning of the selected elements
-  sectionDOM.prepend(divFirst)
-  divFirst.append(divSecond)
-  divSecond.prepend(divThirth)
-  divThirth.prepend(imgs);
-  divSecond.append(divFourth)
-  divFourth.prepend(divFourth_1)
-  divFourth_1.append(h4_1);
-  divFourth_1.append(h4_2);
-  divFourth.append(divFourth_2);
-  divFourth_2.append(p);
-
-  //classLists
-  sectionDOM.classList.add("menu");
-  divFirst.classList.add("card", "mb-3", "col-sm-5", "mb-5");
-  divSecond.classList.add("row", "g-0");
-  divThirth.classList.add("col-md-4");
-  imgs.classList.add("img-fluid", "img", "photo");
-  divFourth.classList.add("col-md-8");
-  divFourth_1.classList.add("menu-title");
-  h4_1.classList.add("title");
-  h4_2.classList.add("price");
-  p.classList.add("desc", "menu-text");
-
-  if (i % 2 == 0) {
-    divFirst.classList.add("offset-1");
-  }
-}
-
-//Buttons Structure
-let buttonsInner = ["All", "Korea", "Japan", "China"];
-
-for (let counter = 0; counter < 4; counter++) {
-  let element = document.createElement("button");
-  buttonContainer.append(element);
-  element.classList.add("btn", "btn-outline-dark");
-  element.setAttribute("type", "button");
-  element.setAttribute("onclick", "bu(event)");
-  element.innerHTML = buttonsInner[counter];
-
-  if (counter !== 0) {
-    element.classList.add("btn-item");
-  }
-
-}
-
-
-//Create Elements
-function createCustomElements(elementType) {
-  return document.createElement(elementType)
-}
-
-//DOM
-let cardDOM = document.querySelectorAll(".card");
-let titleDOM = document.querySelectorAll(".title");
-let priceDOM = document.querySelectorAll(".price");
-let imgDOM = document.querySelectorAll(".img");
-let descDOM = document.querySelectorAll(".desc");
-
-
-
-//Merge Content When the Page Loaded
-window.addEventListener("load", load);
-function load() {
-  menu.forEach((value, index) => {
-    titleDOM[index].innerHTML = menu[index].title;
-    priceDOM[index].innerHTML = menu[index].price;
-    descDOM[index].innerHTML = menu[index].desc;
-    imgDOM[index].setAttribute("src", menu[index].img);
-  });
-}
-
-
-
-
-
-
-
-
-
