@@ -1,4 +1,4 @@
-//Arrays
+//Arrays for contents
 const menu = [
   {
     id: 1,
@@ -140,16 +140,16 @@ function pageStructure(newArray) {
     divFourth_2.append(p);
 
     //classLists
-    sectionDOM.classList.add("newArray");
+    sectionDOM.classList.add("menu");
     divFirst.classList.add("card", "mb-3", "col-sm-5", "mb-5");
     divSecond.classList.add("row", "g-0");
     divThirth.classList.add("col-md-4");
     imgs.classList.add("img-fluid", "img", "photo");
     divFourth.classList.add("col-md-8");
-    divFourth_1.classList.add("newArray-title");
+    divFourth_1.classList.add("menu-title");
     h4_1.classList.add("title");
     h4_2.classList.add("price");
-    p.classList.add("desc", "newArray-text");
+    p.classList.add("desc", "menu-text");
 
     if (i % 2 == 0) {
       divFirst.classList.add("offset-1");
@@ -169,7 +169,6 @@ function pageStructure(newArray) {
     descDOM[index].innerHTML = newArray[index].desc;
     imgDOM[index].setAttribute("src", newArray[index].img);
   });
-
 }
 
 //Create Elements
