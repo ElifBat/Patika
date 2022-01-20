@@ -85,47 +85,46 @@ const menu = [
 ];
 
 //Page Structure DOMs
-let btnDom = document.querySelector(".btn-container")
+let buttonContainer = document.querySelector(".btn-container")
 let sectionDOM = document.querySelector(".section-center");
 
+//Merge Content When the Page Filtered
+function bu(event) {
+  let buttonContent = event.target.innerHTML;
 
-//Buttons
-let buttons = ["button1", "button2", "button3", "button4"];
-let buttonsInner = ["All", "Korea", "Japan", "China"];
-
-buttons.forEach(element => {
-  element = document.createElement("button");
-  btnDom.append(element);
-  element.classList.add("btn", "btn-outline-dark");
-  element.setAttribute("type", "button");
-
-  buttonsInner.forEach((value, index) => {
-    element.innerHTML = buttonsInner[index];
-  });
-
-
-  for (let i = 0; i < buttons.length; i++) {
-    if (i !== 0) {
-      element.classList.add("btn-item");
+  let newArray = []
+  for (let counter = 0; counter < menu.length; counter++) {
+    if (buttonContent == "All") {
+      load()
     }
-  };
+    else if (menu[counter].category == buttonContent) {
+      newArray.push(menu[counter]);
+    }
+  }
 
-});
+  //Merge Content with the Page
+  newArray.forEach((value, index) => {
+    titleDOM[index].innerHTML = newArray[index].title;
+    priceDOM[index].innerHTML = newArray[index].price;
+    descDOM[index].innerHTML = newArray[index].desc;
+    imgDOM[index].setAttribute("src", newArray[index].img);
+  });
+}
 
 //Menu Content Structure
 for (let i = 0; i < menu.length; i++) {
 
   //Create Elements
-  let divFirst = createDiv();
-  let divSecond = createDiv();
-  let divThirth = createDiv();
-  let divFourth = createDiv();
-  let divFourth_1 = createDiv();
-  let divFourth_2 = createDiv();
-  let h4_1 = createH4();
-  let h4_2 = createH4();
-  let imgs = createImg();
-  let p = createP();
+  let divFirst = createCustomElements("div");
+  let divSecond = createCustomElements("div");
+  let divThirth = createCustomElements("div");
+  let divFourth = createCustomElements("div");
+  let divFourth_1 = createCustomElements("div");
+  let divFourth_2 = createCustomElements("div");
+  let h4_1 = createCustomElements("h4");
+  let h4_2 = createCustomElements("h4");
+  let imgs = createCustomElements("img");
+  let p = createCustomElements("p");
 
   //Create Attributes
   divFirst.setAttribute("id", `${i}`);
@@ -160,21 +159,27 @@ for (let i = 0; i < menu.length; i++) {
   }
 }
 
+//Buttons Structure
+let buttonsInner = ["All", "Korea", "Japan", "China"];
+
+for (let counter = 0; counter < 4; counter++) {
+  let element = document.createElement("button");
+  buttonContainer.append(element);
+  element.classList.add("btn", "btn-outline-dark");
+  element.setAttribute("type", "button");
+  element.setAttribute("onclick", "bu(event)");
+  element.innerHTML = buttonsInner[counter];
+
+  if (counter !== 0) {
+    element.classList.add("btn-item");
+  }
+
+}
+
+
 //Create Elements
-function createDiv(item) {
-  return (item = document.createElement("div"));
-}
-function createH4(item) {
-  return (item = document.createElement("h4"));
-}
-function createP(item) {
-  return (item = document.createElement("p"));
-}
-function createImg(item) {
-  return (item = document.createElement("img"));
-}
-function createBtn(item) {
-  return (item = document.createElement("button"));
+function createCustomElements(elementType) {
+  return document.createElement(elementType)
 }
 
 //DOM
@@ -184,13 +189,21 @@ let priceDOM = document.querySelectorAll(".price");
 let imgDOM = document.querySelectorAll(".img");
 let descDOM = document.querySelectorAll(".desc");
 
-//Merge Content with the Page
-menu.forEach((value, index) => {
-  titleDOM[index].innerHTML = menu[index].title;
-  priceDOM[index].innerHTML = menu[index].price;
-  descDOM[index].innerHTML = menu[index].desc;
-  imgDOM[index].setAttribute("src", menu[index].img);
-});
+
+
+//Merge Content When the Page Loaded
+window.addEventListener("load", load);
+function load() {
+  menu.forEach((value, index) => {
+    titleDOM[index].innerHTML = menu[index].title;
+    priceDOM[index].innerHTML = menu[index].price;
+    descDOM[index].innerHTML = menu[index].desc;
+    imgDOM[index].setAttribute("src", menu[index].img);
+  });
+}
+
+
+
 
 
 
