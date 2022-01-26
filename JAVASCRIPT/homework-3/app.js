@@ -163,6 +163,7 @@ function pageStructure(newArray) {
   let imgDOM = document.querySelectorAll(".img");
   let descDOM = document.querySelectorAll(".desc");
 
+  //Merge Content 
   newArray.forEach((value, index) => {
     titleDOM[index].innerHTML = newArray[index].title;
     priceDOM[index].innerHTML = newArray[index].price;
@@ -179,13 +180,13 @@ function createCustomElements(elementType) {
 //Events
 window.addEventListener("load", load);
 
-//Merge Content When the Page Loaded
+//Create Content When the Page Loaded
 function load() {
   newArray = menu.slice();
   pageStructure(newArray)
 }
 
-//Merge Content When the Page Filtered
+//Create Content When the Page Filtered
 function clickButton(event) {
   newArray = [];
   let buttonContent = event.target.innerHTML;

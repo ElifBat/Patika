@@ -1,0 +1,19 @@
+{
+    "name": "homework-1",
+    "version": "1.0.0",
+    "description": "learning at patika",
+    "main": "app.js",
+    "type": "module",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "start": "node app.js"
+    },
+    "author": "Elif Çifci",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.25.0",
+        "node-fetch": "^3.2.0"
+    }
+}
