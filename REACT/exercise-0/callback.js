@@ -15,7 +15,7 @@ import axios from "axios"
 
 //-----------------------------------------------------------------
 
-//Belli bir saırayla gelmiyor.
+//Belli bir sırayla gelmiyor.
 // fetch('https://jsonplaceholder.typicode.com/users/1')
 //   .then(response => response.json())
 //   .then(json => {console.log(`USER CAME: `), console.log(json);});
