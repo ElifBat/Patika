@@ -1,0 +1,54 @@
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+}
+#container{
+  background-color: rgb(203, 157, 241);
+  width: 600px;
+  padding: 20px;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 35px;
+  border: rgb(166, 72, 243) solid 3px;
+
+}
+
+ul, li {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.list {
+  margin: 15px;
+}
+
+.list> li {
+  background-color:rgb(240, 223, 253);
+  padding: 5px;
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 0px;
+}
+.addInput {
+  margin-bottom: 5px;
+}
+
+h1{
+  color:rgb(94, 7, 165);
+}
