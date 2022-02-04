@@ -20,7 +20,7 @@ function Form({ contacts, addContact }) {
         if (form.fullname === "" || form.number === "") {
             return false;
         }
-        
+
         addContact([...contacts, form]);
     }
 
@@ -46,7 +46,7 @@ function Form({ contacts, addContact }) {
             <div className="btn">
                 <button >Add</button>
             </div>
-            
+
         </form>
     )
 }
