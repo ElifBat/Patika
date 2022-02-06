@@ -1,65 +1,51 @@
-import { useState } from 'react';
-const buttonDOM = document.getElementsByClassName("filterButton")
+import { useState, useEffect } from 'react';
+const buttonDOM = document.getElementsByClassName("filterButton");
 
-function Filter({ list }) {
-    const [filteredList, setFilteredList] = useState("all");
-    
+function Filter({ list, filteredList, setFilteredList, deleteCompletedList }) {
 
     const onClick = (event) => {
-        Object.values(buttonDOM).map((item) => item.classList.remove("selected"))
-        event.target.classList.toggle("selected");
+        Object.values(buttonDOM).forEach((item) => item.classList.remove("selected"))
+        event.target.classList.add("selected");
+        allButton(event.target.id);
+    }
 
-        if (event.target.id == "all") {
-            allButton();
+    const allButton = (buttonId) => {
+        if (buttonId == "all") {
+            setFilteredList([...list])
         }
-
-        if (event.target.id == "active") {
-            activeButton();
+        else if (buttonId == "active") {
+            const activeList = list.filter((item) => {
+                if (item.done == false) {
+                    return { item }
+                }
+            })
+            setFilteredList(activeList)
         }
-
-        if (event.target.id == "completed") {
-            completedButton();
+        else if (buttonId == "completed") {
+            setFilteredList(completedList)
+        }
+        else if (buttonId == "clear-completed") {
+            deleteCompletedList(completedList)
         }
     }
 
-    const allButton = () => {
-        setFilteredList("all")
-    }
+    const completedList = list.filter((item) => {
+        if (item.done == true) {
+            return { item }
+        }
+    })
 
-    const activeButton = () => {
-        const copyList = [...list];
-        copyList.filter((item) => {
-            item.done = false;
-        })
-        setFilteredList(copyList)
-    }
+    useEffect(() => allButton(), [list]);
 
-    const completedButton = () => {
-        console.log("completedButton");
-    }
-
-
-
-
-    return <div className={"filters"}>
-
-        <span className={"todo-count"}>
-            <strong>{list.length}</strong> items left
-        </span>
-        <ul>
-            <li>
-                <button id={"all"} className={"filterButton"} onClick={onClick}>All</button>
-            </li>
-
-            <li>
-                <button id={"active"} className={"filterButton"} onClick={onClick} >Active</button>
-            </li>
-
-            <li>
-                <button id={"completed"} className={"filterButton"} onClick={onClick}>Completed</button>
-            </li>
-        </ul>
-    </div>;
+    return <footer className={"footer"}>
+        <div className={"filters"}>
+            <button className={"todo-count"}><strong>{list.length}</strong> items left</button>
+            <button id={"all"} className={"filterButton"} onClick={onClick}>All</button>
+            <button id={"active"} className={"filterButton"} onClick={onClick} >Active</button>
+            <button id={"completed"} className={"filterButton"} onClick={onClick}>Completed</button>
+            <button id={"clear-completed"} className={"filterButton"} onClick={onClick}>Clear completed</button>
+        </div>
+    </footer>;
 }
 
 export default Filter;

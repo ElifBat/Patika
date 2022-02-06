@@ -9,6 +9,23 @@ input{
 	font-size: 24px;
 }
 
+button {
+	margin: 0;
+	padding: 3px;
+	border:none;
+	background: none;
+	font-size: 100%;
+	vertical-align: baseline;
+	font-family: inherit;
+	font-weight: inherit;
+	color: inherit;
+	-webkit-appearance: none;
+	appearance: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	cursor: pointer;
+}
+
 .todoapp {
 	
 	background: #fff;
@@ -25,7 +42,7 @@ input{
 	font-size: 100px;
 	font-weight: 100;
 	text-align: center;
-	color: rgba(175, 47, 47, 0.15);
+	color: rgba(240, 0, 0, 0.425);
 	-webkit-text-rendering: optimizeLegibility;
 	-moz-text-rendering: optimizeLegibility;
 	text-rendering: optimizeLegibility;
@@ -36,8 +53,6 @@ input{
 	font-weight: 300;
 	color: #e6e6e6;
 }
-
-
 
 .todoapp input::-moz-placeholder {
 	font-style: italic;
@@ -112,7 +127,6 @@ input{
 	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-
 }
 
 .new-todo {
@@ -126,9 +140,14 @@ input{
 	padding-left: 20px;
 }
 
-/* boş daire */
 .todo-list li .toggle + label {
 	background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23ededed%22%20stroke-width%3D%223%22/%3E%3C/svg%3E');
+	background-repeat: no-repeat;
+	background-position: center left;
+}
+
+.todo-list li .toggle:checked + label {
+	background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23bddad5%22%20stroke-width%3D%223%22/%3E%3Cpath%20fill%3D%22%235dc2af%22%20d%3D%22M72%2025L42%2071%2027%2056l-4%204%2020%2020%2034-52z%22/%3E%3C/svg%3E');
 	background-repeat: no-repeat;
 	background-position: center left;
 }
@@ -145,14 +164,9 @@ input{
 	right: 100%;
 	bottom: 100%;
 }
+
 .todo-list li .toggle {
 	opacity: 0;
-}
-
-html,
-body {
-	margin: 0;
-	padding: 0;
 }
 
 body {
@@ -206,31 +220,13 @@ body {
 	border-bottom: none;
 }
 
-button {
-	margin: 0;
-	padding: 0;
-	border:none;
-	background: none;
-	font-size: 100%;
-	vertical-align: baseline;
-	font-family: inherit;
-	font-weight: inherit;
-	color: inherit;
-	-webkit-appearance: none;
-	appearance: none;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
 .todo-count {
 	float: left;
 	text-align: left;
-	}
+}
 
 
 .filters {
-	display: flex;
-	align-items: center;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -239,14 +235,11 @@ button {
 	left: 0;
 }
 
-ul {
-	margin: 0px;
-}
-.filters li {
+.filters{
 	display: inline;
 }
 
-.filters li button {
+.filters button {
 	color: inherit;
 	margin: 3px;
 	padding: 3px 7px;
@@ -256,24 +249,30 @@ ul {
 	cursor: pointer; /* Because of Mavo: we don't use the href attribute in such situations */
 }
 
-.filters li button:hover {
+.todo-count {
+	border: 0px;
+	cursor: default;
+}
+
+.filters button:hover {
 	border-color: rgba(175, 47, 47, 0.1);
 }
 
-.filters li button.selected {
+.filters button.selected {
 	border-color: rgba(175, 47, 47, 0.2);
+	background-color: #737373;
+	color:white
 }
 
-.todo-list li .toggle:checked + label {
-	background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23bddad5%22%20stroke-width%3D%223%22/%3E%3Cpath%20fill%3D%22%235dc2af%22%20d%3D%22M72%2025L42%2071%2027%2056l-4%204%2020%2020%2034-52z%22/%3E%3C/svg%3E');
-	background-repeat: no-repeat;
-	background-position: center left;
-}
+#clear-completed, #clear-completed:active {
+	float: right;
 
+}
 
 .todo-list li.editing .view {
 	display: none;
 }
+
 .toggle-all + label:before {
 	content: '❯';
 	font-size: 22px;
@@ -283,6 +282,14 @@ ul {
 
 .toggle-all:checked + label:before {
 	color: #737373;
+}
+
+.todo-list li label {
+	word-break: break-all;
+	padding: 15px 15px 15px 60px;
+	display: block;
+	line-height: 1.2;
+	transition: color 0.4s;
 }
 
 .todo-list li .toggle {
@@ -302,59 +309,48 @@ ul {
 .todo-list li .toggle {
 	opacity: 0;
 }
-.todo-list li label {
-	word-break: break-all;
-	padding: 15px 15px 15px 60px;
-	display: block;
-	line-height: 1.2;
-	transition: color 0.4s;
-}
 
 .completed {
 	color: #d9d9d9;
 	text-decoration-line:line-through;
 }
 
-
-
-
-/* 
-[mv-app] [mv-mode="edit"] .mv-editor {
-	width: 100% !important;
+.todo-list li.editing:last-child {
+	margin-bottom: -1px;
 }
 
-[property]:hover,
-[mv-app] [mv-mode="edit"] .mv-editor {
-	box-shadow: none !important;
-}
-
-[property="todo"] label:focus-within {
-	padding: 0;
-	margin: 0;
-	background-image: none !important;
-}
-
-.mv-item-bar,
-.mv-ui.mv-message,
-button.mv-add,
-meta,
-[property="todo"] .view:focus-within .toggle,
-[property="todo"] .view:focus-within button {
-	display: none !important;
+.footer {
+	color: #777;
+	padding: 10px 15px;
+	height: 20px;
+	text-align: center;
+	border-top: 1px solid #e6e6e6;
 }
 
 
-[property="todo"]:focus-within {
-	border-bottom: 0;
+:focus {
+	outline: 0;
 }
 
+.footer:before {
+	content: '';
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 50px;
+	overflow: hidden;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
+	            0 8px 0 -3px #f6f6f6,
+	            0 9px 1px -3px rgba(0, 0, 0, 0.2),
+	            0 16px 0 -6px #f6f6f6,
+	            0 17px 2px -6px rgba(0, 0, 0, 0.2);
+}
 
-
-
-[mv-app] [mv-mode="edit"] .mv-editor:focus {
-	width: calc(100% - 78px) !important;
-	padding: 14px 16px !important;
-	margin: 0 0 0 43px !important;
-	border: 1px solid #999 !important; 
-	box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2) !important;
-} */
+.info {
+	margin: 65px auto 0;
+	color: #bfbfbf;
+	font-size: 10px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	text-align: center;
+}
