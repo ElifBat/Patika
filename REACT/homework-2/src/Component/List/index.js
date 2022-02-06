@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 
-function List({ list, selectItem, deleteItem}) {
+function List({ selectItem, deleteItem, filteredList }) {
 
   return <div>
     <ul className="todo-list">{
-      list.map((item, index) => (
-        <li key={item.text} className={"todo"}>
+      filteredList.map((item, index) => (
+        <li id={index} key={item.text} className={"todo"}>
           <input
             checked={item.done}
             name={"toggle"}

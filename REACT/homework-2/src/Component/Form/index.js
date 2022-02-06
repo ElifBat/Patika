@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 const initialFormValue = { text: "", done: false };
 
-function Form({ list, setList, selectAllItems, isSelectAll }) {
+function Form({ list, setList, setFilteredList, selectAllItems, isSelectAll }) {
     const selectedArrow = 'arrow-icon.svg';
     const unSelectedArrow = 'whitearrow.svg';
 
@@ -24,6 +24,7 @@ function Form({ list, setList, selectAllItems, isSelectAll }) {
         }
 
         setList([...list, form])
+        setFilteredList([...list, form])
     };
 
     return <div>
