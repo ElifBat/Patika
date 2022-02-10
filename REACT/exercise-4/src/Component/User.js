@@ -20,7 +20,7 @@ function User() {
             <pre>id: {id}</pre>
             {!isLoading && <code>{JSON.stringify(user)}</code>}
             <br /><br />
-            {<Link to={`/user/${parseInt(id) + 1}`}>
+            {<Link to={`/users/${parseInt(id) + 1}`}>
                 Next User ({parseInt(id) + 1})
             </Link>}
         </div>

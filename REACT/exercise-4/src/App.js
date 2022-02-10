@@ -9,7 +9,6 @@ import {
 import About from "./Component/About";
 import Home from "./Component/Home";
 import Users from "./Component/Users"
-import User from './Component/User';
 
 const App = () => {
 
@@ -33,7 +32,7 @@ const App = () => {
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
           <Route path="/users" component={Users} />
-          <Route path="/:id" component={User} />
+          {/* <Route path="/:id" component={User} /> */}
         </Switch>
       </div>
     </Router>
