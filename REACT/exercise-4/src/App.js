@@ -9,6 +9,7 @@ import {
 import About from "./Component/About";
 import Home from "./Component/Home";
 import Users from "./Component/Users"
+import Error404 from './Component/Error404';
 
 const App = () => {
 
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
           <Route path="/users" component={Users} />
+          <Route path="*" component={Error404} />
           {/* <Route path="/:id" component={User} /> */}
         </Switch>
       </div>
