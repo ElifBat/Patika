@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  NavLink
 } from "react-router-dom";
 
 import About from "./Component/About";
@@ -18,13 +18,13 @@ const App = () => {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <NavLink exact activeStyle={{backgroundColor: "black", color: "white"}} to="/">Home</NavLink>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <NavLink activeStyle={{backgroundColor: "black", color: "white"}} to="/about">About</NavLink>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <NavLink activeStyle={{backgroundColor: "black", color: "white"}} to="/users">Users</NavLink>
             </li>
           </ul>
         </nav>

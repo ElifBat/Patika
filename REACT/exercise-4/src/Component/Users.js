@@ -1,6 +1,6 @@
-import React from 'react';
-import { useEffect, useState } from 'react/cjs/react.development';
-import { Link, Switch, Route, useRouteMatch } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import { NavLink, Switch, Route } from 'react-router-dom'
+import { useRouteMatch } from 'react-router-dom/cjs/react-router-dom.min';
 import User from './User'
 //import { axios } from 'axios'
 
@@ -25,7 +25,7 @@ function Users() {
             <ul>
                 {users.map((user) => (
                     <li key={user.id}>
-                        <Link to={`${url}/${user.id}`}>{"User name: " + user.name}</Link>
+                        <NavLink activeClassName="active" to={`${url}/${user.id}`}>{"User name: " + user.name}</NavLink>
                     </li>
                 ))}
             </ul>

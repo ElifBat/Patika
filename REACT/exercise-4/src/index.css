@@ -15,3 +15,15 @@ code {
     monospace;
 }
 
+a{
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.active {
+  background-color: black;
+  color: #fff;
+}
